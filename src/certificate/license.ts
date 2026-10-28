@@ -3,6 +3,7 @@ import { h, illustrationUrl } from '../ui';
 export interface LicenseData {
   name: string;
   date: string;
+  validUntil: string;
   certificateId: string;
 }
 
@@ -72,7 +73,7 @@ export function renderLicense(data: LicenseData): HTMLElement {
       field('1./2.', data.name, 'lf-name'),
       field('3.', data.date),
       field('4a.', data.date),
-      field('4b.', 'Popcorn-Ende', 'lf-wide'),
+      field('4b.', data.validUntil, 'lf-wide'),
       field('4c.', 'Prüfstelle für Erhitzungswesen', 'lf-wide lf-small'),
       field('5.', data.certificateId),
       field('9.', 'M', 'lf-class'),

@@ -4,6 +4,8 @@ import { gradeExam, MAX_POINTS, type QuestionResult } from '../quiz/grade';
 import { sheetOf, type Screen } from '../state';
 import { formatDate, h, illustration, pluralPoints } from '../ui';
 
+const VALIDITY_DAYS = 7;
+
 const KEYWORD_LABELS: Record<string, string[]> = {
   'm-maroni': ['Einritzen', 'Wasser / Feuchtigkeit', 'Abdecken', 'Leistung und Garzeit', 'Ruhezeit'],
 };
@@ -73,12 +75,14 @@ export const resultScreen: Screen = (root, ctx) => {
   const sheet = sheetOf(state);
   const result = gradeExam(sheet.items.map((i) => i.question), state.answers);
   const issued = state.issuedAt ? new Date(state.issuedAt) : new Date();
+  const validUntil = new Date(issued);
+  validUntil.setDate(validUntil.getDate() + VALIDITY_DAYS);
 
   const licenseSlot = h('div', { class: 'license-slot' });
   const status = h('p', { class: 'muted', role: 'status', 'aria-live': 'polite' });
 
   const showLicense = () => {
-    const data = { name: state.name, date: formatDate(issued), certificateId: certificateId(sheet.seed) };
+    const data = { name: state.name, date: formatDate(issued), validUntil: formatDate(validUntil), certificateId: certificateId(sheet.seed) };
     const pdfButton = h('button', { class: 'btn btn-primary btn-block', type: 'button' }, 'Zertifikat als PDF speichern');
     pdfButton.addEventListener('click', async () => {
       pdfButton.disabled = true;

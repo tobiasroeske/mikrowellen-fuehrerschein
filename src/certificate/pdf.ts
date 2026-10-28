@@ -4,6 +4,7 @@ import { illustrationUrl } from '../ui';
 export interface CertificateData {
   name: string;
   date: string;
+  validUntil: string;
   certificateId: string;
   sheetNumber: string;
   points: number;
@@ -98,6 +99,7 @@ export async function buildCertificate(data: CertificateData) {
   doc.setFontSize(11);
   const rows: [string, string][] = [
     ['Datum', data.date],
+    ['Gültig bis', data.validUntil],
     ['Prüfungsbogen', data.sheetNumber.replace(/^Bogen /, '')],
     ['Fehlerpunkte', `${data.points} von max. ${data.maxPoints}`],
   ];
@@ -140,7 +142,7 @@ export async function buildCertificate(data: CertificateData) {
   doc.setFont('helvetica', 'normal');
   doc.setFontSize(9);
   doc.setTextColor(...GREY);
-  doc.text('Prüfstelle für Erhitzungswesen', 80, 188, { align: 'center' });
+  doc.text('Prüfstelle für Erhitzungswesen (Michael Weichelt)', 80, 188, { align: 'center' });
 
   // Certificate ID and QR
   doc.text(`Zertifikats-ID: ${data.certificateId}`, cx + 10, 188);
