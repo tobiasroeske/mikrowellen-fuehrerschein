@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img">
+<title>Leistungsregler der Mikrowelle mit Stufen von 150 bis 1000 Watt</title>
+<style>
+[class]{transform-box:fill-box;transform-origin:center}
+text{font-family:system-ui,sans-serif}
+.pt{transform-box:view-box;transform-origin:200px 180px;animation:pend 1.8s ease-in-out infinite alternate}
+@keyframes pend{from{transform:rotate(54deg)}to{transform:rotate(66deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect width="400" height="300" rx="16" fill="#eef1f5" stroke="#d3d8de" stroke-width="2"/>
+<g stroke="#1d2330" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<rect x="20" y="16" width="360" height="268" rx="14" fill="#e6e8eb"/>
+<path d="M106.4 229.8A106 106 0 0 1 106.4 130.2" fill="none" stroke="#1f4e9c" stroke-width="16" stroke-linecap="butt"/><path d="M110.1 123.8A106 106 0 0 1 196.3 74.1" fill="none" stroke="#6b8f71" stroke-width="16" stroke-linecap="butt"/><path d="M203.7 74.1A106 106 0 0 1 289.9 123.8" fill="none" stroke="#f5c400" stroke-width="16" stroke-linecap="butt"/><path d="M293.6 130.2A106 106 0 0 1 293.6 229.8" fill="none" stroke="#d7262e" stroke-width="16" stroke-linecap="butt"/>
+<g stroke="none"><text x="85.7" y="251" text-anchor="middle" font-size="16" font-weight="700" fill="#1d2330">150</text><text x="85.7" y="119" text-anchor="middle" font-size="16" font-weight="700" fill="#1d2330">360</text><text x="200" y="53" text-anchor="middle" font-size="16" font-weight="700" fill="#1d2330">600</text><text x="314.3" y="119" text-anchor="middle" font-size="16" font-weight="700" fill="#1d2330">800</text><text x="314.3" y="251" text-anchor="middle" font-size="16" font-weight="700" fill="#1d2330">1000</text></g>
+<circle cx="200" cy="180" r="66" fill="#fff"/><circle cx="200" cy="180" r="48" fill="#e6e8eb"/>
+<g class="pt"><polygon points="200,88 191,140 209,140" fill="#d7262e"/><circle cx="200" cy="180" r="14" fill="#1f4e9c"/></g>
+<text x="200" y="268" text-anchor="middle" font-size="20" font-weight="700" fill="#1d2330" stroke="none">W</text>
+<g transform="translate(58 50)"><g stroke="#4aa3df" stroke-width="4" fill="none" stroke-linecap="round"><path d="M0 0L0 -18M0 -10.8L-4.4 -13.9M0 -10.8L4.4 -13.9"/><path d="M0 0L15.6 -9M9.4 -5.4L9.9 -10.8M9.4 -5.4L14.3 -3.1"/><path d="M0 0L15.6 9M9.4 5.4L14.3 3.1M9.4 5.4L9.9 10.8"/><path d="M0 0L0 18M0 10.8L4.4 13.9M0 10.8L-4.4 13.9"/><path d="M0 0L-15.6 9M-9.4 5.4L-9.9 10.8M-9.4 5.4L-14.3 3.1"/><path d="M0 0L-15.6 -9M-9.4 -5.4L-14.3 -3.1M-9.4 -5.4L-9.9 -10.8"/></g></g>
+<g transform="translate(342 50)" fill="none" stroke="#d7262e" stroke-width="4"><path d="M-14 -14q8 10 0 18t0 18M0 -14q8 10 0 18t0 18M14 -14q8 10 0 18t0 18"/></g>
+</g>
+</svg>

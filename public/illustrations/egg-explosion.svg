@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img">
+<title>Ei explodiert in der Mikrowelle</title>
+<style>
+[class]{transform-box:fill-box;transform-origin:center}
+text{font-family:system-ui,sans-serif}
+.pf{animation:pf .5s ease-in-out infinite alternate}
+@keyframes pf{from{transform:scale(.94) rotate(-3deg)}to{transform:scale(1.06) rotate(3deg)}}
+.sh{animation:sh .35s ease-in-out infinite alternate}
+@keyframes sh{from{transform:translate(-3px,2px)}to{transform:translate(3px,-2px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect width="400" height="300" rx="16" fill="#eef1f5" stroke="#d3d8de" stroke-width="2"/>
+<g stroke="#1d2330" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<rect x="30" y="70" width="320" height="190" rx="18" fill="#e6e8eb"/>
+<rect x="46" y="86" width="214" height="158" rx="10" fill="#34445f"/>
+<rect x="272" y="86" width="64" height="158" rx="8" fill="#fff"/><rect x="280" y="96" width="48" height="20" rx="3" fill="#6b8f71"/><circle cx="304" cy="190" r="16" fill="#1f4e9c"/>
+<polygon class="pf" points="153,91 166.5,118.9 193,102.7 189.3,133.6 220.3,134.3 200.5,158.2 226.2,175.5 196.7,184.9 208.9,213.5 179,205.4 173.8,236 153,213 132.2,236 127,205.4 97.1,213.5 109.3,184.9 79.8,175.5 105.5,158.2 85.7,134.3 116.7,133.6 113,102.7 139.5,118.9" fill="#f5c400"/>
+<polygon class="pf" points="161.3,117.7 168,139 189.8,134.1 181.2,154.7 201,165 181.2,175.3 189.8,195.9 168,191 161.3,212.3 147.8,194.5 129,206.6 130,184.3 107.9,181.4 123,165 107.9,148.6 130,145.7 129,123.4 147.8,135.5" fill="#fff" stroke-width="2.5"/>
+<g class="sh"><path d="M153 135Q123 150 125 172Q128 200 153 200Q180 200 182 172Q183 150 153 135Z" fill="#f7f1e3"/>
+<path d="M130 165L142 158L150 170L162 158L174 168L182 160" fill="none" stroke-width="2.5"/>
+<circle cx="153" cy="182" r="8" fill="#f5c400" stroke-width="2.5"/></g>
+<g class="sh" style="animation-delay:-.2s" fill="#f7f1e3"><path d="M82 118l16-8l6 16l-14 6z"/><path d="M208 112l16 6l-8 14l-14-6z"/><path d="M96 214l14 4l-4 14l-14-4z"/><path d="M212 208l14-6l6 14l-14 6z"/></g>
+<path d="M120 100L106 88M190 98L200 84M72 160L56 160M236 160L250 160" fill="none" stroke="#9aa1a9" stroke-dasharray="6 6" stroke-width="3"/>
+<g transform="translate(-14 10)"><polygon points="336,12 392,112 280,112" fill="#f5c400" stroke-width="4"/>
+<rect x="331" y="46" width="10" height="34" rx="4" fill="#1d2330" stroke="none"/><circle cx="336" cy="96" r="6" fill="#1d2330" stroke="none"/></g>
+</g>
+</svg>

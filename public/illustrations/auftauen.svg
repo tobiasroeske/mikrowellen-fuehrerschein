@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img">
+<title>Gefrorenes Fleisch auftauen: niedrige Leistung und Zeit einstellen</title>
+<style>
+[class]{transform-box:fill-box;transform-origin:center}
+text{font-family:system-ui,sans-serif}
+.sn{transform-box:view-box;animation:rot 12s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+.mh{transform-box:view-box;transform-origin:318px 218px;animation:rot 6s linear infinite}
+.tw{animation:tw 1.4s steps(1) infinite}
+@keyframes tw{0%{opacity:1}50%{opacity:.2}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect width="400" height="300" rx="16" fill="#eef1f5" stroke="#d3d8de" stroke-width="2"/>
+<g stroke="#1d2330" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<ellipse cx="130" cy="226" rx="106" ry="24" fill="#9aa1a9"/><ellipse cx="130" cy="220" rx="96" ry="20" fill="#fff"/>
+<path d="M60 190Q56 150 100 142Q150 128 190 150Q214 176 188 200Q150 220 100 214Q66 212 60 190Z" fill="#e58a8a"/>
+<path d="M82 168Q100 152 124 160M140 186Q164 176 180 184M96 192Q110 200 130 196" fill="none" stroke="#fff" stroke-width="4"/>
+<path d="M70 190Q78 205 100 208Q96 192 70 190ZM150 150Q170 152 186 164Q168 170 150 150Z" fill="#dff1fb" stroke-width="2"/>
+<g class="sn" style="transform-origin:100px 80px"><g stroke="#4aa3df" stroke-width="4" fill="none" stroke-linecap="round"><path d="M100 80L100 42M100 57.2L90.7 50.7M100 57.2L109.3 50.7"/><path d="M100 80L132.9 61M119.7 68.6L120.7 57.2M119.7 68.6L130 73.4"/><path d="M100 80L132.9 99M119.7 91.4L130 86.6M119.7 91.4L120.7 102.8"/><path d="M100 80L100 118M100 102.8L109.3 109.3M100 102.8L90.7 109.3"/><path d="M100 80L67.1 99M80.3 91.4L79.3 102.8M80.3 91.4L70 86.6"/><path d="M100 80L67.1 61M80.3 68.6L70 73.4M80.3 68.6L79.3 57.2"/></g></g>
+<polygon class="tw" points="180,88 182.8,97.2 192,100 182.8,102.8 180,112 177.2,102.8 168,100 177.2,97.2" fill="#dff1fb" stroke="#4aa3df" stroke-width="2"/>
+<polygon class="tw" style="animation-delay:-.7s" points="40,114 42.1,121.9 50,124 42.1,126.1 40,134 37.9,126.1 30,124 37.9,121.9" fill="#dff1fb" stroke="#4aa3df" stroke-width="2"/>
+<polygon class="tw" style="animation-delay:-.35s" points="210,141 212.1,147.9 219,150 212.1,152.1 210,159 207.9,152.1 201,150 207.9,147.9" fill="#dff1fb" stroke="#4aa3df" stroke-width="2"/>
+<circle cx="318" cy="90" r="50" fill="#fff"/>
+<path d="M286.8 108A36 36 0 0 1 286.8 72" fill="none" stroke="#1f4e9c" stroke-width="10"/>
+<path d="M288.2 69.9A36 36 0 0 1 349.2 108" fill="none" stroke="#9aa1a9" stroke-width="10" opacity=".4"/>
+<g transform="rotate(-100 318 90)"><polygon points="318,50 312,90 324,90" fill="#d7262e"/></g><circle cx="318" cy="90" r="7" fill="#1f4e9c"/>
+<circle cx="318" cy="218" r="46" fill="#fff"/>
+<path d="M318 180v6M318 250v6M280 218h6M350 218h6" stroke-width="3"/>
+<line x1="318" y1="218" x2="318" y2="196" stroke-width="4"/>
+<line class="mh" x1="318" y1="218" x2="338" y2="218" stroke="#d7262e" stroke-width="4"/><circle cx="318" cy="218" r="4" fill="#1d2330"/>
+</g>
+</svg>

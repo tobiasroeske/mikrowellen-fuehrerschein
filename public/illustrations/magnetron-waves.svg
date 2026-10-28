@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img">
+<title>Schnittbild einer Mikrowelle: Magnetron, Hohlleiter und Wellen im Garraum</title>
+<style>
+[class]{transform-box:fill-box;transform-origin:center}
+text{font-family:system-ui,sans-serif}
+.w{stroke-dasharray:10 8;animation:dash 1s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-36}}
+.st{animation:rise 2.4s ease-in-out infinite}
+@keyframes rise{0%{transform:translateY(4px);opacity:0}50%{opacity:.9}100%{transform:translateY(-8px);opacity:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect width="400" height="300" rx="16" fill="#eef1f5" stroke="#d3d8de" stroke-width="2"/>
+<g stroke="#1d2330" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<rect x="24" y="70" width="352" height="196" rx="14" fill="#e6e8eb"/>
+<rect x="134" y="84" width="226" height="168" rx="6" fill="#fff"/>
+<rect x="44" y="88" width="62" height="52" rx="6" fill="#9aa1a9"/>
+<path d="M56 96V132M68 96V132M80 96V132M92 96V132" stroke-width="2"/>
+<rect x="106" y="100" width="48" height="28" fill="#f5c400"/>
+<g fill="none" stroke="#d7262e" stroke-width="4">
+<path class="w" d="M154 114q14 -20 28 0t28 0t28 0t28 0t28 0t28 0t28 0"/>
+<g transform="rotate(22 154 114)"><path class="w" opacity=".6" d="M154 114q14 -20 28 0t28 0t28 0t28 0t28 0t28 0t28 0"/></g>
+<g transform="rotate(42 154 114)"><path class="w" opacity=".6" d="M154 114q14 -20 28 0t28 0t28 0t28 0t28 0t28 0t28 0"/></g>
+</g>
+<ellipse cx="247" cy="233" rx="84" ry="9" fill="#9aa1a9"/>
+<path d="M205 200h84q0 32-42 32q-42 0-42-32z" fill="#fff"/>
+<ellipse cx="247" cy="200" rx="42" ry="7" fill="#e8743b"/>
+<g fill="none" stroke="#9aa1a9" stroke-width="3"><path class="st" d="M235 190q-6-8 0-14"/><path class="st" style="animation-delay:-1s" d="M258 190q-6-8 0-14"/></g>
+<text x="75" y="168" text-anchor="middle" font-size="14" font-weight="600" fill="#1d2330" stroke="none">Magnetron</text>
+<line x1="75" y1="154" x2="75" y2="154" stroke="#d7262e" stroke-width="3"/><polygon points="75,144 83,154 67,154" fill="#d7262e" stroke="#d7262e" stroke-width="1"/>
+<text x="130" y="48" text-anchor="middle" font-size="14" font-weight="600" fill="#1d2330" stroke="none">Hohlleiter</text>
+<line x1="130" y1="54" x2="130" y2="88" stroke="#1f4e9c" stroke-width="3"/><polygon points="130,98 122,88 138,88" fill="#1f4e9c" stroke="#1f4e9c" stroke-width="1"/>
+<rect x="244" y="22" width="104" height="32" rx="16" fill="#f5c400"/>
+<text x="296" y="45" text-anchor="middle" font-size="18" font-weight="700" fill="#1d2330" stroke="none">2,45 GHz</text>
+</g>
+</svg>

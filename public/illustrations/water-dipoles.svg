@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" role="img">
+<title>Wassermoleküle drehen sich im Wechselfeld hin und her und erzeugen Wärme</title>
+<style>
+[class]{transform-box:fill-box;transform-origin:center}
+text{font-family:system-ui,sans-serif}
+.r1{animation:rot 1.6s ease-in-out infinite alternate}
+@keyframes rot{from{transform:rotate(-55deg)}to{transform:rotate(55deg)}}
+.hw{animation:rise 2.2s ease-in-out infinite}
+@keyframes rise{0%{transform:translateY(6px);opacity:0}50%{opacity:1}100%{transform:translateY(-10px);opacity:0}}
+.fl{stroke-dasharray:8 8;animation:dash 1s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-32}}
+.pl{animation:sw 1.6s steps(1) infinite}
+@keyframes sw{0%{opacity:1}50%{opacity:0}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+<rect width="400" height="300" rx="16" fill="#eef1f5" stroke="#d3d8de" stroke-width="2"/>
+<g stroke="#1d2330" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+<rect x="50" y="22" width="300" height="16" rx="6" fill="#d7262e"/><rect x="50" y="262" width="300" height="16" rx="6" fill="#1f4e9c"/>
+<g stroke="none" font-family="system-ui,sans-serif" font-weight="700" font-size="20" text-anchor="middle" fill="#fff"><text x="200" y="36">+</text><text x="200" y="277">–</text></g>
+<g fill="none" stroke="#1f4e9c" stroke-width="3">
+<path class="fl" d="M80 46V254M320 46V254" opacity=".6"/></g>
+<g transform="translate(200 150) scale(2.4)"><g class="r1" style="animation-delay:0s"><circle cx="-22" cy="17" r="11" fill="#fff" stroke-width="1.25"/><circle cx="22" cy="17" r="11" fill="#fff" stroke-width="1.25"/><circle cx="0" cy="0" r="18" fill="#d7262e" stroke-width="1.25"/><g stroke="none" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle"><text x="-22" y="22" font-size="14" fill="#d7262e">+</text><text x="22" y="22" font-size="14" fill="#d7262e">+</text><text x="0" y="6" font-size="18" fill="#fff">–</text></g></g></g><g transform="translate(300 90) scale(1)"><g class="r1" style="animation-delay:-0.4s"><circle cx="-22" cy="17" r="11" fill="#fff" stroke-width="3"/><circle cx="22" cy="17" r="11" fill="#fff" stroke-width="3"/><circle cx="0" cy="0" r="18" fill="#d7262e" stroke-width="3"/><g stroke="none" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle"><text x="-22" y="22" font-size="14" fill="#d7262e">+</text><text x="22" y="22" font-size="14" fill="#d7262e">+</text><text x="0" y="6" font-size="18" fill="#fff">–</text></g></g></g><g transform="translate(110 210) scale(1)"><g class="r1" style="animation-delay:-0.9s"><circle cx="-22" cy="17" r="11" fill="#fff" stroke-width="3"/><circle cx="22" cy="17" r="11" fill="#fff" stroke-width="3"/><circle cx="0" cy="0" r="18" fill="#d7262e" stroke-width="3"/><g stroke="none" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle"><text x="-22" y="22" font-size="14" fill="#d7262e">+</text><text x="22" y="22" font-size="14" fill="#d7262e">+</text><text x="0" y="6" font-size="18" fill="#fff">–</text></g></g></g><g transform="translate(300 225) scale(1)"><g class="r1" style="animation-delay:-1.2s"><circle cx="-22" cy="17" r="11" fill="#fff" stroke-width="3"/><circle cx="22" cy="17" r="11" fill="#fff" stroke-width="3"/><circle cx="0" cy="0" r="18" fill="#d7262e" stroke-width="3"/><g stroke="none" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle"><text x="-22" y="22" font-size="14" fill="#d7262e">+</text><text x="22" y="22" font-size="14" fill="#d7262e">+</text><text x="0" y="6" font-size="18" fill="#fff">–</text></g></g></g><g transform="translate(110 90) scale(1)"><g class="r1" style="animation-delay:-0.2s"><circle cx="-22" cy="17" r="11" fill="#fff" stroke-width="3"/><circle cx="22" cy="17" r="11" fill="#fff" stroke-width="3"/><circle cx="0" cy="0" r="18" fill="#d7262e" stroke-width="3"/><g stroke="none" font-family="system-ui,sans-serif" font-weight="700" text-anchor="middle"><text x="-22" y="22" font-size="14" fill="#d7262e">+</text><text x="22" y="22" font-size="14" fill="#d7262e">+</text><text x="0" y="6" font-size="18" fill="#fff">–</text></g></g></g>
+<g fill="none" stroke="#d7262e" stroke-width="4"><path class="hw" d="M130 120q-8-10 0-20t0-20"/><path class="hw" style="animation-delay:-.7s" d="M270 120q-8-10 0-20t0-20"/><path class="hw" style="animation-delay:-1.4s" d="M200 85q-8-10 0-20t0-20"/></g>
+</g>
+</svg>
