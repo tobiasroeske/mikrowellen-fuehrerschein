@@ -82,7 +82,7 @@ export const resultScreen: Screen = (root, ctx) => {
   const status = h('p', { class: 'muted', role: 'status', 'aria-live': 'polite' });
 
   const showLicense = () => {
-    const data = { name: state.name, date: formatDate(issued), validUntil: formatDate(validUntil), certificateId: certificateId(sheet.seed) };
+    const data = { name: state.name, birthDate: formatDate(new Date(`${state.birthDate}T00:00:00`)), date: formatDate(issued), validUntil: formatDate(validUntil), certificateId: certificateId(sheet.seed) };
     const pdfButton = h('button', { class: 'btn btn-primary btn-block', type: 'button' }, 'Zertifikat als PDF speichern');
     pdfButton.addEventListener('click', async () => {
       pdfButton.disabled = true;
@@ -111,14 +111,29 @@ export const resultScreen: Screen = (root, ctx) => {
     value: state.name,
     placeholder: 'Vor- und Nachname',
   });
-  const issueButton = h('button', { class: 'btn btn-primary btn-block', type: 'button', disabled: !state.name.trim() }, 'Führerschein ausstellen');
-  nameInput.addEventListener('input', () => {
-    issueButton.disabled = !nameInput.value.trim();
+  const today = new Date().toISOString().slice(0, 10);
+  const birthInput = h('input', {
+    class: 'input',
+    id: 'holder-birth',
+    type: 'date',
+    name: 'bday',
+    autocomplete: 'bday',
+    min: '1900-01-01',
+    max: today,
+    value: state.birthDate,
   });
+  const isComplete = () => Boolean(nameInput.value.trim() && birthInput.value);
+  const issueButton = h('button', { class: 'btn btn-primary btn-block', type: 'button', disabled: !isComplete() }, 'Führerschein ausstellen');
+  const updateButton = () => {
+    issueButton.disabled = !isComplete();
+  };
+  nameInput.addEventListener('input', updateButton);
+  birthInput.addEventListener('input', updateButton);
+  birthInput.addEventListener('change', updateButton);
   const issue = () => {
-    const name = nameInput.value.trim();
-    if (!name) return;
-    state.name = name;
+    if (!isComplete()) return;
+    state.name = nameInput.value.trim();
+    state.birthDate = birthInput.value;
     ctx.save();
     showLicense();
     licenseSlot.querySelector('.license')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -128,7 +143,7 @@ export const resultScreen: Screen = (root, ctx) => {
     if (e.key === 'Enter') issue();
   });
 
-  if (result.passed && state.name.trim()) showLicense();
+  if (result.passed && state.name.trim() && state.birthDate) showLicense();
 
   const reason = result.passed
     ? 'Herzlichen Glückwunsch, Sie dürfen ab sofort mit Mikrowellen umgehen.'
@@ -160,6 +175,8 @@ export const resultScreen: Screen = (root, ctx) => {
             h('h2', { id: 'license-title' }, 'Ihr Führerschein'),
             h('label', { class: 'label', for: 'holder-name' }, 'Name des Inhabers'),
             nameInput,
+            h('label', { class: 'label', for: 'holder-birth' }, 'Geburtsdatum'),
+            birthInput,
             issueButton,
             licenseSlot,
           ),

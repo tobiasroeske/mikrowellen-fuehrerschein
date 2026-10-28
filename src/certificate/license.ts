@@ -2,6 +2,7 @@ import { h, illustrationUrl } from '../ui';
 
 export interface LicenseData {
   name: string;
+  birthDate: string;
   date: string;
   validUntil: string;
   certificateId: string;
@@ -71,7 +72,7 @@ export function renderLicense(data: LicenseData): HTMLElement {
       'div',
       { class: 'lic-fields', 'aria-hidden': 'true' },
       field('1./2.', data.name, 'lf-name'),
-      field('3.', data.date),
+      field('3.', data.birthDate),
       field('4a.', data.date),
       field('4b.', data.validUntil, 'lf-wide'),
       field('4c.', 'Prüfstelle für Erhitzungswesen', 'lf-wide lf-small'),

@@ -3,6 +3,7 @@ import { illustrationUrl } from '../ui';
 
 export interface CertificateData {
   name: string;
+  birthDate: string;
   date: string;
   validUntil: string;
   certificateId: string;
@@ -91,9 +92,14 @@ export async function buildCertificate(data: CertificateData) {
   doc.line(cx - 80, 88, cx + 80, 88);
 
   doc.setFont('helvetica', 'normal');
+  doc.setFontSize(11);
+  doc.setTextColor(...GREY);
+  doc.text(`geboren am ${data.birthDate}`, cx, 95, { align: 'center' });
+
+  doc.setTextColor(40, 40, 40);
   doc.setFontSize(14);
-  doc.text('die theoretische Prüfung zur sachkundigen Bedienung von Mikrowellengeräten', cx, 99, { align: 'center' });
-  doc.text('bestanden hat.', cx, 106, { align: 'center' });
+  doc.text('die theoretische Prüfung zur sachkundigen Bedienung von Mikrowellengeräten', cx, 104, { align: 'center' });
+  doc.text('bestanden hat.', cx, 111, { align: 'center' });
 
   // Details
   doc.setFontSize(11);

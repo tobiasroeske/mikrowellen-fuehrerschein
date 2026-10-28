@@ -15,6 +15,8 @@ export interface State {
   submitted: boolean;
   timedOut: boolean;
   name: string;
+  /** ISO date (yyyy-mm-dd) from the date input. */
+  birthDate: string;
   /** ISO timestamp of submission. */
   issuedAt: string | null;
 }
@@ -31,6 +33,7 @@ export const initialState = (): State => ({
   submitted: false,
   timedOut: false,
   name: '',
+  birthDate: '',
   issuedAt: null,
 });
 
